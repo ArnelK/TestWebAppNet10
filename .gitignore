@@ -1,0 +1,58 @@
+## --- .NET Core / .NET Standard Build-Dateien ---
+bin/
+obj/
+.config/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+TestResults/
+
+## --- Visual Studio & IDE Müll ---
+.vs/
+.vscode/
+*.user
+*.suo
+*.userprefs
+*.sln.docstates
+
+## --- JetBrains Rider / IntelliJ (.idea) ---
+# Whitelist-Strategie: Alles ignorieren, außer Team-Configs
+.idea/*
+!.idea/vcs.xml
+!.idea/encodings.xml
+!.idea/misc.xml
+!.idea/codeStyles/
+!.idea/dictionaries/
+!.idea/scopes/
+!.idea/runConfigurations/
+!.idea/icon.png
+!.idea/inspectionProfiles/
+# Diese explizit ignorieren (nur sicherheitshalber)
+.idea/workspace.xml
+.idea/shelf/
+.idea/contentModel.xml
+.idea/dataSources/
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/tasks.xml
+
+## --- macOS Spezifisch ---
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+## --- Secrets & Environment ---
+# Niemals Secrets committen!
+appsettings.Development.json
+secrets.json
+.env
+local.settings.json
+
+## --- Sonstiges ---
+*.log
+*.tmp
+thumbs.db

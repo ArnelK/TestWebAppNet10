@@ -1,0 +1,7 @@
+﻿services:
+  testwebappnet10.api:
+    image: testwebappnet10.api
+    build:
+      context: .
+      dockerfile: TestWebAppNet10.API/Dockerfile
+

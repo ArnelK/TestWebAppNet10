@@ -1,0 +1,28 @@
+﻿# --- Git ---
+.git
+.gitignore
+
+# --- IDEs & System ---
+.idea
+.vs
+.vscode
+**/.DS_Store
+**/thumbs.db
+
+# --- Build Artefakte (WICHTIG!) ---
+# Wir wollen im Container frisch bauen, nicht lokale Dateien kopieren
+**/bin
+**/obj
+**/TestResults
+
+# --- Dokumentation & unnötiges ---
+README.md
+*.md
+docker-compose.yml
+docker-compose.override.yml
+.dockerignore
+
+# --- Secrets ---
+**/secrets.json
+**/appsettings.Development.json
+**/.env

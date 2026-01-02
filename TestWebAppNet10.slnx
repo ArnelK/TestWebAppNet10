@@ -1,0 +1,6 @@
+<Solution>
+    <Folder Name="/Solution Items/">
+        <File Path="compose.yaml"/>
+    </Folder>
+    <Project Path="TestWebAppNet10.API/TestWebAppNet10.API.csproj"/>
+</Solution>
