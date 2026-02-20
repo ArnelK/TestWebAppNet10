@@ -1,0 +1,27 @@
+<div class="monkey-dashboard">
+    <header>
+        <h1>Zoo & Monkeys Management</h1>
+    </header>
+
+    <main>
+        <section class="monkey-list-section">
+            <h2>Our Monkeys</h2>
+
+            @if (monkeys().length > 0) {
+            <div class="monkey-grid">
+                @for (monkey of monkeys(); track monkey.id) {
+                <div class="monkey-card">
+                    <div class="monkey-avatar">🐵</div>
+                    <div class="monkey-info">
+                        <h3>{{ monkey.name }}</h3>
+                        <span class="species-badge">{{ monkey.species }}</span>
+                    </div>
+                </div>
+                }
+            </div>
+            } @else {
+            <p class="empty-state">No monkeys currently in the zoo. Add some!</p>
+            }
+        </section>
+    </main>
+</div>
