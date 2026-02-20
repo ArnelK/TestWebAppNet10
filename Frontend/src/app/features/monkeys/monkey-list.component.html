@@ -7,14 +7,18 @@
         <section class="monkey-list-section">
             <h2>Our Monkeys</h2>
 
-            @if (monkeys().length > 0) {
+            @if (monkeysData.isLoading()) {
+            <p>Loading monkeys...</p>
+            } @else if (monkeysData.error()) {
+            <p>Failed to load monkeys.</p>
+            } @else if (monkeysData.value() && monkeysData.value()!.length > 0) {
             <div class="monkey-grid">
-                @for (monkey of monkeys(); track monkey.id) {
+                @for (monkey of monkeysData.value(); track monkey.id) {
                 <div class="monkey-card">
                     <div class="monkey-avatar">🐵</div>
                     <div class="monkey-info">
                         <h3>{{ monkey.name }}</h3>
-                        <span class="species-badge">{{ monkey.species }}</span>
+                        <span class="species-badge">{{ monkey.age }} yrs • {{ monkey.temperament }}</span>
                     </div>
                 </div>
                 }
