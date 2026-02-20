@@ -56,3 +56,6 @@ local.settings.json
 *.log
 *.tmp
 thumbs.db
+
+# Agent Files
+.agents/
