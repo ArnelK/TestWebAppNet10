@@ -4,6 +4,34 @@
     </header>
 
     <main>
+        <section class="monkey-form-section">
+            <h2>Add New Monkey</h2>
+            <form (submit)="addMonkey($event)" class="monkey-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" [(ngModel)]="name" name="name" required placeholder="Monkey Name" />
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" [(ngModel)]="age" name="age" required min="1" placeholder="Years" />
+                </div>
+
+                <div class="form-group">
+                    <label for="temperament">Temperament</label>
+                    <select id="temperament" [(ngModel)]="temperament" name="temperament">
+                        @for (temp of temperaments; track temp) {
+                        <option [value]="temp">{{ temp }}</option>
+                        }
+                    </select>
+                </div>
+
+                <button type="submit" [disabled]="isSubmitting() || !name() || !age()">
+                    {{ isSubmitting() ? 'Adding...' : 'Add Monkey' }}
+                </button>
+            </form>
+        </section>
+
         <section class="monkey-list-section">
             <h2>Our Monkeys</h2>
 
@@ -20,6 +48,7 @@
                         <h3>{{ monkey.name }}</h3>
                         <span class="species-badge">{{ monkey.age }} yrs • {{ monkey.temperament }}</span>
                     </div>
+                    <button class="delete-btn" (click)="deleteMonkey(monkey.id)" aria-label="Delete monkey">❌</button>
                 </div>
                 }
             </div>
