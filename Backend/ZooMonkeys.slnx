@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="ZooMonkeys.API/ZooMonkeys.API.csproj" />
+  <Project Path="ZooMonkeys.Domain/ZooMonkeys.Domain.csproj" />
+</Solution>
